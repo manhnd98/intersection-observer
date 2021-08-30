@@ -120,6 +120,40 @@
                     }
                 }
             }
+        },
+        "intersection-observer": {
+            "projectType": "library",
+            "root": "projects/intersection-observer",
+            "sourceRoot": "projects/intersection-observer/src",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-ng-packagr:build",
+                    "options": {
+                        "tsConfig": "projects/intersection-observer/tsconfig.lib.json",
+                        "project": "projects/intersection-observer/ng-package.json"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/intersection-observer/src/test.ts",
+                        "tsConfig": "projects/intersection-observer/tsconfig.spec.json",
+                        "karmaConfig": "projects/intersection-observer/karma.conf.js",
+                        "codeCoverage": true,
+                        "browsers": "ChromeHeadless"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/intersection-observer/tsconfig.lib.json",
+                            "projects/intersection-observer/tsconfig.spec.json"
+                        ],
+                        "exclude": ["**/node_modules/**"]
+                    }
+                }
+            }
         }
     },
     "defaultProject": "demo"

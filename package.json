@@ -23,7 +23,13 @@
         "release:patch": "npm run release -- --release-as patch",
         "release:minor": "npm run release -- --release-as minor",
         "release:major": "npm run release -- --release-as major",
-        "publish": "npm run build:all && npm run publish:all"
+        "publish": "npm run build:all && npm run publish:all",
+        "build:all": "npm run build:intersection-observer",
+        "publish:all": "npm run publish:intersection-observer",
+        "build:intersection-observer": "ng run intersection-observer:build",
+        "test:intersection-observer": "ng run intersection-observer:test",
+        "test:intersection-observer:watch": "ng run intersection-observer:test --watch=true",
+        "publish:intersection-observer": "npm publish ./dist/intersection-observer"
     },
     "description": "This is a template project to develop, create and open-source Angular libraries with demos",
     "keywords": ["angular", "ng", "workspace", "library", "starter", "tinkoff"],
