@@ -1,6 +1,7 @@
 import {LocationStrategy, PathLocationStrategy} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app.routes';
 import {StaticModule} from './modules/static/static.module';
@@ -13,6 +14,7 @@ import {StaticModule} from './modules/static/static.module';
         }),
         AppRoutingModule,
         StaticModule,
+        NoopAnimationsModule,
     ],
     declarations: [AppComponent],
     providers: [

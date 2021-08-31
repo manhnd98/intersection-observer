@@ -22,7 +22,10 @@
                         "tsConfig": "tsconfig.json",
                         "aot": false,
                         "assets": ["projects/demo/src/favicon.ico"],
-                        "styles": ["projects/demo/src/styles.css"],
+                        "styles": [
+                            "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+                            "projects/demo/src/styles.css"
+                        ],
                         "scripts": []
                     },
                     "configurations": {
@@ -70,7 +73,10 @@
                         "tsConfig": "projects/demo/tsconfig.spec.json",
                         "karmaConfig": "projects/demo/karma.conf.js",
                         "codeCoverage": true,
-                        "browsers": "ChromeHeadless"
+                        "browsers": "ChromeHeadless",
+                        "styles": [
+                            "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+                        ]
                     }
                 },
                 "lint": {
